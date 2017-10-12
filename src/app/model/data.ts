@@ -1,0 +1,1 @@
+export const Data = ["home", "services", "servers", "login", "register"];

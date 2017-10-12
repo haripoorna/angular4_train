@@ -2,17 +2,35 @@
 
 <!-- <div class="container well"></div> -->
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-   <a class="navbar-brand" href="#">Digital Lync</a>
-    </div>
-    <ul class="nav navbar-nav">
-    <!--  <li class="active" (click)="LoadPage('Home')"><a href="#">Home</a></li>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Digital Lync</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <!--  <li class="active" (click)="LoadPage('Home')"><a href="#">Home</a></li>
       <li  (click)="LoadPage('Login')"><a href="#">Login</a></li>
       <li  (click)="LoadPage('Register')"><a href="#">Register</a></li>-->
-    <!--  <li *ngFor="let item of Tabs" (click)="LoadPage(item)"><a href="#">{{item}}</a></li>-->
-    <li><a href="#">Home </a></li>
+            <!--  <li *ngFor="let item of Tabs" (click)="LoadPage(item)"><a href="#">{{item}}</a></li>-->
+            <!-- <li (click)="pageRedirection('home')"><a href="#">Home </a></li>
+            <li (click)="pageRedirection('services')"><a href="#">Services</a></li>
+            <li (click)="pageRedirection('servers')"><a href="#">My servers</a></li>
+            <li (click)="pageRedirection('login')"><a href="#">Login</a></li>
+            <li (click)="pageRedirection('register')"><a href="#">Register</a></li> -->
 
-    </ul>
-  </div>
+            <li *ngFor="let tab of Data; let i = index" (click)="pageRedirection(tab, i)"><a href="#">{{tab}}</a></li>
+        </ul>
+    </div>
 </nav>
+<div *ngFor="let item of array">
+    <h1>{{item.name}}</h1>
+    <p>{{item.id}}</p>
+</div>
+<div *ngIf="pageName == 'home'">
+    <app-body></app-body>
+</div>
+<div *ngIf="pageName == 'services'">
+    <app-services></app-services>
+</div>
+<div *ngIf="pageName == 'login'">
+    <app-login></app-login>
+</div>
