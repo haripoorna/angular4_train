@@ -12,17 +12,17 @@ export class HeaderComponent {
   constructor(){
    this.Data = Data;
    console.log(this.Data);
-   this.array = [
-     {
-       "id" : "1",
-       "name" : "hari"
-     },
-     {
-       "id" : "2",
-       "name" : "Surya"
-     }
-    ]
-  }
+  //  this.array = [
+  //    {
+  //      "id" : "1",
+  //      "name" : "hari"
+  //    },
+  //    {
+  //      "id" : "2",
+  //      "name" : "Surya"
+  //    }
+  //   ]
+   }
   pageRedirection(value,index){
     console.log(index);
     if(value === 'home'){

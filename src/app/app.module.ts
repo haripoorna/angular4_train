@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import {BodyComponent } from './body/body.component';
 import { HeaderComponent } from './header/header.component';
 import { ServicesComponent } from './services/services.component';
 import { LoginComponent } from './login/login.component';
+import { AddserverComponent } from './addserver/addserver.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +16,16 @@ import { LoginComponent } from './login/login.component';
     BodyComponent,
     HeaderComponent,
     ServicesComponent,
-    LoginComponent
+    LoginComponent,
+    AddserverComponent,
+    ServerElementComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

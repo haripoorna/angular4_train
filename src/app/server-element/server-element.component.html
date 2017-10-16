@@ -1,0 +1,18 @@
+<!-- <p>
+  server-element works!
+</p> -->
+
+<div class="container well">
+    <div class="row" *ngFor="let item of element">
+        <div class="col-md-12" *ngIf="item.type === 'server'">
+            <h3>{{item.name}}</h3>
+            <strong><p>{{item.content}}</p></strong>
+            <p>This is {{item.type}} type</p>
+        </div>
+        <div class="col-md-12" *ngIf="item.type === 'blueprint'">
+            <h3>{{item.name}}</h3>
+            <strong><em>{{item.content}}</em></strong>
+            <p>This is {{item.type}} type</p>
+        </div>
+    </div>
+</div>
