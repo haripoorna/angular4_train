@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ServerElementComponent implements OnInit {
 @Input() element: any;
   constructor() { }
-
+   
   ngOnInit() {
   }
 

@@ -8,29 +8,30 @@ import {FormsModule} from '@angular/forms';
 export class BodyComponent {
   // interpolationValue = "this is interpolation value"
   serverName: any = '';
-  serverContent:any = '';
+  serverContent: any = '';
   serverElement = [];
-  constructor(){
+  constructor() {
     this.serverElement = [{
       type : 'server',
       name : 'test server',
       content : 'This is Dummy test server'
     }]
   }
-  // addServer(type:String){
-  //   this.serverElement.push({
-  //     type : type,
-  //     name : this.serverName,
-  //     content : this.serverContent
-  //   })
-  //   console.log(this.serverElement)
-  // }
-  // addServerBluePrint(type:String){
-  //   this.serverElement.push({
-  //     type : type,
-  //     name : this.serverName,
-  //     content : this.serverContent
-  //   })
-  //   console.log(this.serverElement)
-  // }
+  serverAdded(event) {
+    console.log(event);
+    this.serverElement.push({
+      type : event.type,
+      name : event.serverName,
+      content : event.serverContent
+    })
+    console.log(this.serverElement);
+  }
+ serverBluePrintAdded(event){
+    this.serverElement.push({
+      type : event.type,
+      name : event.serverName,
+      content : event.serverContent
+    })
+    console.log(this.serverElement);
+  }
 }

@@ -26,5 +26,5 @@
         </div>
     </div>
 </div> -->
-<app-addserver></app-addserver>
+<app-addserver (addServer)="serverAdded($event)" (addServerBluePrint)="serverBluePrintAdded($event)"></app-addserver>
 <app-server-element [element]="serverElement"></app-server-element>
